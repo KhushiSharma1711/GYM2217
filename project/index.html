@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PowerFit - Transform Your Life</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-dumbbell me-2"></i>PowerFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#classes"><i class="fas fa-dumbbell me-1"></i> Classes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#trainers"><i class="fas fa-users me-1"></i> Trainers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing"><i class="fas fa-tags me-1"></i> Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#login" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt me-1"></i> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1><i class="fas fa-fire me-2"></i>Transform Your Body<br>Transform Your Life</h1>
+          <p>Join the ultimate fitness experience with state-of-the-art facilities and expert trainers</p>
+          <a href="#pricing" class="btn btn-primary btn-lg"><i class="fas fa-rocket me-2"></i>Start Your Journey</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-dumbbell me-2"></i>Elite Training Programs</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="class-card">
+              <img src="https://source.unsplash.com/random/400x300?hiit" alt="HIIT Class">
+              <h3><i class="fas fa-bolt me-2"></i>HIIT Revolution</h3>
+              <p>High-intensity interval training that burns fat and builds endurance</p>
+              <button class="btn btn-primary" onclick="showBookingModal('HIIT Revolution')">
+                <i class="fas fa-dumbbell me-2"></i>Join Class
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="class-card">
+              <img src="https://source.unsplash.com/random/400x300?yoga" alt="Yoga Class">
+              <h3><i class="fas fa-spa me-2"></i>Power Yoga Flow</h3>
+              <p>Find strength and flexibility with our dynamic yoga sessions</p>
+              <button class="btn btn-primary" onclick="showBookingModal('Power Yoga Flow')">
+                <i class="fas fa-spa me-2"></i>Join Class
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="class-card">
+              <img src="https://source.unsplash.com/random/400x300?weightlifting" alt="Strength Training">
+              <h3><i class="fas fa-fire me-2"></i>Beast Mode</h3>
+              <p>Build muscle and strength with our comprehensive program</p>
+              <button class="btn btn-primary" onclick="showBookingModal('Beast Mode')">
+                <i class="fas fa-fire me-2"></i>Join Class
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-users me-2"></i>Expert Trainers</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="class-card trainer-card">
+              <img src="https://source.unsplash.com/random/400x300?trainer" alt="John Doe">
+              <h3><i class="fas fa-user-ninja me-2"></i>John Doe</h3>
+              <p>Certified Personal Trainer<br>Specializes in Strength Training</p>
+              <button class="btn btn-primary">
+                <i class="fas fa-calendar-check me-2"></i>Book Session
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="class-card trainer-card">
+              <img src="https://source.unsplash.com/random/400x300?fitness-trainer" alt="Jane Smith">
+              <h3><i class="fas fa-user-ninja me-2"></i>Jane Smith</h3>
+              <p>Yoga Instructor<br>10+ Years Experience</p>
+              <button class="btn btn-primary">
+                <i class="fas fa-calendar-check me-2"></i>Book Session
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="class-card trainer-card">
+              <img src="https://source.unsplash.com/random/400x300?gym-trainer" alt="Mike Johnson">
+              <h3><i class="fas fa-user-ninja me-2"></i>Mike Johnson</h3>
+              <p>HIIT Specialist<br>Nutrition Expert</p>
+              <button class="btn btn-primary">
+                <i class="fas fa-calendar-check me-2"></i>Book Session
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-tags me-2"></i>Membership Plans</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="class-card">
+              <h3><i class="fas fa-star me-2"></i>Basic</h3>
+              <p class="price">$49/month</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check me-2"></i>Access to Gym</li>
+                <li><i class="fas fa-check me-2"></i>Basic Equipment</li>
+                <li><i class="fas fa-check me-2"></i>Locker Room Access</li>
+              </ul>
+              <button class="btn btn-primary">
+                <i class="fas fa-shopping-cart me-2"></i>Choose Plan
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="class-card">
+              <h3><i class="fas fa-star me-2"></i>Premium</h3>
+              <p class="price">$89/month</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check me-2"></i>All Basic Features</li>
+                <li><i class="fas fa-check me-2"></i>Group Classes</li>
+                <li><i class="fas fa-check me-2"></i>Personal Trainer (2x/month)</li>
+              </ul>
+              <button class="btn btn-primary">
+                <i class="fas fa-shopping-cart me-2"></i>Choose Plan
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="class-card">
+              <h3><i class="fas fa-crown me-2"></i>Elite</h3>
+              <p class="price">$149/month</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check me-2"></i>All Premium Features</li>
+                <li><i class="fas fa-check me-2"></i>Unlimited Classes</li>
+                <li><i class="fas fa-check me-2"></i>Personal Trainer (8x/month)</li>
+              </ul>
+              <button class="btn btn-primary">
+                <i class="fas fa-shopping-cart me-2"></i>Choose Plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="fas fa-sign-in-alt me-2"></i>Welcome Back</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label"><i class="fas fa-envelope me-2"></i>Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label"><i class="fas fa-lock me-2"></i>Password</label>
+                <input type="password" class="form-control" id="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                <i class="fas fa-sign-in-alt me-2"></i>Login
+              </button>
+              <p class="text-center mt-3">
+                Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Sign up</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="fas fa-calendar-check me-2"></i>Book Your Class</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="className" class="form-label"><i class="fas fa-dumbbell me-2"></i>Class</label>
+                <input type="text" class="form-control" id="className" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="bookingDate" class="form-label"><i class="fas fa-calendar me-2"></i>Date</label>
+                <input type="date" class="form-control" id="bookingDate" required>
+              </div>
+              <div class="mb-3">
+                <label for="bookingTime" class="form-label"><i class="fas fa-clock me-2"></i>Time</label>
+                <select class="form-control" id="bookingTime" required>
+                  <option value="">Select time</option>
+                  <option value="07:00">07:00 AM</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                  <option value="18:00">06:00 PM</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                <i class="fas fa-check-circle me-2"></i>Book Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
